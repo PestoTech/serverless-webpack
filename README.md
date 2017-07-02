@@ -211,7 +211,8 @@ plugin with Babel. To try it, from inside the example folder:
 
 * 2.0.0
   * Support arbitrary Webpack versions as peer dependency [#83](https://github.com/elastic-coders/serverless-webpack/pull/83)
-  * Documentation updates [#88](https://github.com/elastic-coders/serverless-webpack/pull/88)
+  * Support `serverless offline start` invocation [#131](https://github.com/elastic-coders/serverless-webpack/pull/131)
+  * Documentation updates [#88](https://github.com/elastic-coders/serverless-webpack/pull/88), [#140](https://github.com/elastic-coders/serverless-webpack/pull/140)
   * Print webpack stats on recompile [#127](https://github.com/elastic-coders/serverless-webpack/pull/127)
 
 [ico-serverless]: http://public.serverless.com/badges/v3.svg
