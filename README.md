@@ -177,8 +177,8 @@ Options are:
 
 ### Using with serverless-offline and serverless-webpack plugin
 
- Run `serverless offline start`. In comparison with `serverless offline`, the `start` command will fire an `init` and a `end` lifecycle hook which is needed for serverless-offline and serverless-dynamodb-local to switch off both resources. 
- 
+ Run `serverless offline start`. In comparison with `serverless offline`, the `start` command will fire an `init` and a `end` lifecycle hook which is needed for serverless-offline and serverless-dynamodb-local to switch off both resources.
+
  Add plugins to your `serverless.yml` file:
  ```yaml
  plugins:
@@ -212,7 +212,7 @@ plugin with Babel. To try it, from inside the example folder:
 * 2.0.0
   * Support arbitrary Webpack versions as peer dependency [#83](https://github.com/elastic-coders/serverless-webpack/pull/83)
   * Support `serverless offline start` invocation [#131](https://github.com/elastic-coders/serverless-webpack/pull/131)
-  * Documentation updates [#88](https://github.com/elastic-coders/serverless-webpack/pull/88), [#140](https://github.com/elastic-coders/serverless-webpack/pull/140), [#141](https://github.com/elastic-coders/serverless-webpack/issues/141)
+  * Documentation updates [#88](https://github.com/elastic-coders/serverless-webpack/pull/88), [#132](https://github.com/elastic-coders/serverless-webpack/pull/132), [#140](https://github.com/elastic-coders/serverless-webpack/pull/140), [#141](https://github.com/elastic-coders/serverless-webpack/issues/141)
   * Print webpack stats on recompile [#127](https://github.com/elastic-coders/serverless-webpack/pull/127)
 
 [ico-serverless]: http://public.serverless.com/badges/v3.svg
