@@ -38,6 +38,9 @@ class ServerlessWebpack {
             usage: 'Path to output directory',
             shortcut: 'o',
           },
+          skipWebpack: {
+            usage: 'Skip webpack completly. This is useful for skipping the build step when deploying a pre-built zip file using a custom build process.'
+          }
         },
         commands: {
           invoke: {
@@ -91,13 +94,19 @@ class ServerlessWebpack {
     };
 
     this.hooks = {
-      'before:deploy:createDeploymentArtifacts': () => BbPromise.bind(this)
+      'before:deploy:createDeploymentArtifacts': () => {
+        if (options.skipWebpack) return;
+        return BbPromise.bind(this)
         .then(this.validate)
         .then(this.compile)
-        .then(this.packExternalModules),
+        .then(this.packExternalModules);
+      },
 
-      'after:deploy:createDeploymentArtifacts': () => BbPromise.bind(this)
-        .then(this.cleanup),
+      'after:deploy:createDeploymentArtifacts': () => {
+        if (options.skipWebpack) return;        
+        return BbPromise.bind(this)
+        .then(this.cleanup);
+      },
 
       'webpack:validate': () => BbPromise.bind(this)
         .then(this.validate),
